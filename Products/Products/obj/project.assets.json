@@ -9739,9 +9739,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\techi\\OneDrive\\Desktop\\interview-Project\\Products\\Products\\Products.csproj",
-      "projectName": "Products",
-      "projectPath": "C:\\Users\\techi\\OneDrive\\Desktop\\interview-Project\\Products\\Products\\Products.csproj",
+      "projectUniqueName": "C:\\Users\\techi\\OneDrive\\Desktop\\interview-Project\\Products\\Products\\IndianProducts.csproj",
+      "projectName": "IndianProducts",
+      "projectPath": "C:\\Users\\techi\\OneDrive\\Desktop\\interview-Project\\Products\\Products\\IndianProducts.csproj",
       "packagesPath": "C:\\Users\\techi\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\techi\\OneDrive\\Desktop\\interview-Project\\Products\\Products\\obj\\",
       "projectStyle": "PackageReference",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kTYWtxmsMtiNlTHAaIWIzRNaLTS+wLnfkDsfLAacWPj7t8ZKQNzRc0VXY5Y0mbd6wMJED+Bg68liYaSw45sBLw==",
+  "dgSpecHash": "hw/PDd3YCIZTNNHg8CuY/T0/9sOc1kFcIoGI25nFdpm4wRpBzAQkS6gYJjhqus44pUmTD/cpPuu6C7sb7WfkAw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\techi\\OneDrive\\Desktop\\interview-Project\\Products\\Products\\Products.csproj",
+  "projectFilePath": "C:\\Users\\techi\\OneDrive\\Desktop\\interview-Project\\Products\\Products\\IndianProducts.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\techi\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\techi\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

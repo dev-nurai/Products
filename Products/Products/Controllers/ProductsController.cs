@@ -7,9 +7,9 @@ namespace Products.Controllers
     public class ProductsController : Controller
     {
 
-        private readonly IProduct _product;
+        private readonly IProducts _product;
 
-        public ProductsController(IProduct product)
+        public ProductsController(IProducts product)
         {
             _product = product;
         }
@@ -23,12 +23,18 @@ namespace Products.Controllers
         // GET: ProductController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var product = _product.GetProduct(id);
+            if(product == null)
+            {
+                return NotFound();
+            }
+            return View(product);
         }
 
         // GET: ProductController/Create
         public ActionResult Create()
         {
+
             return View();
         }
 
