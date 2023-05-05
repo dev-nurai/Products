@@ -1,8 +1,0 @@
-C:\Users\techi\OneDrive\Desktop\interview-Project\Products\Products\obj\Debug\net6.0\IndianProducts.csproj.AssemblyReference.cache
-C:\Users\techi\OneDrive\Desktop\interview-Project\Products\Products\obj\Debug\net6.0\IndianProducts.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\techi\OneDrive\Desktop\interview-Project\Products\Products\obj\Debug\net6.0\IndianProducts.AssemblyInfoInputs.cache
-C:\Users\techi\OneDrive\Desktop\interview-Project\Products\Products\obj\Debug\net6.0\IndianProducts.AssemblyInfo.cs
-C:\Users\techi\OneDrive\Desktop\interview-Project\Products\Products\obj\Debug\net6.0\IndianProducts.csproj.CoreCompileInputs.cache
-C:\Users\techi\OneDrive\Desktop\interview-Project\Products\Products\obj\Debug\net6.0\IndianProducts.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\techi\OneDrive\Desktop\interview-Project\Products\Products\obj\Debug\net6.0\IndianProducts.RazorAssemblyInfo.cache
-C:\Users\techi\OneDrive\Desktop\interview-Project\Products\Products\obj\Debug\net6.0\IndianProducts.RazorAssemblyInfo.cs
