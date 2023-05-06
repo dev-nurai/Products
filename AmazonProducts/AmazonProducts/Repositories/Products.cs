@@ -16,7 +16,7 @@ namespace AmazonProducts.Repositories
 
         public List<Product> GetProducts()
         {
-            var query = "SELECT * FROM BrandsProduct";
+            var query = "EXEC dbo.spGetAllProducts";
 
             using (var connection = _dapperContext.CreateConnection())
             {
@@ -27,7 +27,7 @@ namespace AmazonProducts.Repositories
 
         public Product GetProduct(int id)
         {
-            var query = "SELECT * FROM BrandsProduct WHERE Id = @Id";
+            var query = "EXEC dbo.spGetProductbyId @Id = @Id";
 
             using (var connection = _dapperContext.CreateConnection())
             {
@@ -38,7 +38,7 @@ namespace AmazonProducts.Repositories
 
         public void AddProduct(Product product)
         {
-            var query = "INSERT INTO BrandsProduct (Name, Price) VALUES (@Name, @Price)";
+            var query = "EXEC spAddProduct @Name = @ProductName, @Price = @ProductPrice";
 
             if (product == null)
             {
@@ -47,7 +47,7 @@ namespace AmazonProducts.Repositories
 
             using (var connection = _dapperContext.CreateConnection())
             {
-                connection.Execute(query, product);
+                connection.Execute(query, new {ProductName = product.Name, ProductPrice = product.Price});
             }
         }
 
@@ -58,23 +58,24 @@ namespace AmazonProducts.Repositories
                 throw new ArgumentNullException(nameof(product), "Product cannot be null");
             }
 
-            var query = "UPDATE BrandsProduct SET Name = @Name, Price = @Price WHERE Id = @Id";
+            var query = "EXEC dbo.spUpdateProduct @Name = @ProductName, @Price = @ProductPrice, @Id = @ProductId";
 
             using (var connection = _dapperContext.CreateConnection())
             {
-                connection.Execute(query, product);
+                connection.Execute(query, new {ProductName = product.Name, ProductPrice = product.Price, ProductId = product.Id});
             }
         }
 
         public void DeleteProduct(int id)
         {
-            var query = "DELETE FROM BrandsProduct WHERE Id = @Id";
+            var query = "EXEC spDeleteProduct @Id = @ProductId";
 
             using (var connection = _dapperContext.CreateConnection())
             {
-                connection.Execute(query, new { Id = id });
+                connection.Execute(query, new { ProductId = id });
             }
         }
+
 
     }
 }
