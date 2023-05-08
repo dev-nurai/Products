@@ -27,7 +27,7 @@
     </thead>
     <tbody>
 @foreach (var item in Model) {
-        <tr>
+            <tr >
             <td>
                 @Html.DisplayFor(modelItem => item.Id)
             </td>
@@ -38,9 +38,36 @@
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-                
-                @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+                @Html.ActionLink("Edit", "Edit", new { id=item.Id }, new { @class = "btn btn-primary" }) |
+                @*@Html.ActionLink("Delete", "Delete", new { id=item.Id })*@
+                @*<a asp-action="Delete" asp-route-id="@item.Id" onclick="return confirmDelete()">Delete</a>*@
+
+                    <button class="btn btn-danger" onclick="showDeleteConfirmation(@item.Id, $(this).closest('tr').attr('rowId'))">Delete</button>
+
+                    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="deleteModalLabel">Delete Confirmation</h5>
+                                    <button type="button" id="closeIcon" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Are you sure you want to delete this product?</p>
+                                    <input type="hidden" id="deleteProductId" value="" />
+                                    <input type="hidden" id="deleteRowId" value="">
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="btnDeleteNo">No</button>
+                                    <button type="button" class="btn btn-danger" id="btnDeleteYes" >Yes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
             </td>
         </tr>
 }

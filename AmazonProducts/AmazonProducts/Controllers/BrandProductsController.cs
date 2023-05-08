@@ -89,17 +89,28 @@ namespace AmazonProducts.Controllers
             {
                 return NotFound();
             }
+
             return View(product);
 
         }
 
         // POST: BrandProductsController/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+        [HttpDelete]
         public ActionResult DeleteConfirmed(int id)
         {
-            _product.DeleteProduct(id);
-            return RedirectToAction(nameof(Index));
+            try
+            {
+                _product.DeleteProduct(id);
+                return Json(new { success = true });
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, error = ex.Message });
+            }
+
+            //return RedirectToAction(nameof(Index));
         }
+
+
     }
 }
